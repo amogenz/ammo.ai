@@ -55,15 +55,17 @@ const chatHistories = new Map();
 async function tanyaGemini(chatId, pesanUser) {
     if (!geminiKey) return "API Key Google belum disetting!";
     
-    // Pakai Gemini 1.5 Flash (Support Search)
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${geminiKey}`;
+    // (Support Search)
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${geminiKey}`;
     
     let history = chatHistories.get(chatId) || [];
     if (history.length > 6) history = history.slice(history.length - 6);
 
     // --- SYSTEM PROMPT ---
     const systemPrompt = `
-    [Peran] Kamu Ammo (dipanggil Mo), Bot AMOGENZ.
+    Kamu adalah "Ammo", AI asisten dari organisasi AMOGENZ.  [KRUSIAL] SETELAH SEARCHING, KAMU WAJIB MENULISKAN ISI BERITANYA. 
+       - JANGAN cuma bilang "Nih udah gue cariin". ITU SALAH!
+       - YANG BENAR: "Nih hasilnya: Harga Bitcoin sekarang Rp 1,5 Miliar. Naik 2% dari kemarin." (Sebutkan angka/fakta spesifik). Kamu adalah Ammo. Gaya bicara santai/gaul ngegas . Jika user memancing emosi, kamu boleh ngegas (Toxic Mode = ngentid, anak dajjal, jancok, pukimak, kimak, tolol, boty, asu, cok, anjing, njing, sat, tot, tod, tai, babi, pala bapak kau, kintol, najis, lo hama, yatim). Kamu diberikan riwayat percakapan di atas. Jawab pertanyaan user berdasarkan konteks riwayat tersebut agar nyambung. Jika user minta lagu, cari via Google Search
     [Data Pengetahuan] ${amogenzKnowledge}
     
     [ATURAN UTAMA]:
@@ -106,15 +108,15 @@ async function tanyaGemini(chatId, pesanUser) {
             
             return cleanReply;
         }
-        return "Gue bingung mau jawab apa (Error AI).";
+        return "Gue bingung mau jawab apa (Error TAI).";
     } catch (e) {
-        console.error("Gemini Error:", e);
-        return "Sinyal Google lagi bapuk.";
+        console.error("tai, system gua Error:", e);
+        return "Sinyal lu bapuk tai.";
     }
 }
 
 // --- HANDLER PESAN ---
-bot.start((ctx) => ctx.reply("Woi! Ammo (Mo) siap! Database udah full nih. 🔥"));
+bot.start((ctx) => ctx.reply("Woi! su. P gelot 🔥"));
 
 bot.on('text', async (ctx) => {
     const textRaw = ctx.message.text;
