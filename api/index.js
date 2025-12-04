@@ -163,8 +163,38 @@ async function tanyaGemini(chatId, pesanUser) {
 // --- 5. HANDLER PESAN ---
 bot.start((ctx) => ctx.reply("Woi! Ammo Amogenz di sini. Mau nanya apa? 🔥"));
 
+// --- HANDLER PESAN (LOGIKA BARU) ---
 bot.on('text', async (ctx) => {
     const text = ctx.message.text;
+    
+    // 1. Cek apakah Private Chat?
+    const isPrivate = ctx.chat.type === 'private';
+    
+    // 2. Cek apakah ada kata "Ammo"?
+    const isMention = text.toLowerCase().includes('ammo');
+    
+    // 3. Cek apakah ini REPLY ke pesan bot? (FITUR BARU)
+    // Logikanya: Ada reply + Yg direply adalah bot ini
+    const isReply = ctx.message.reply_to_message && 
+                    ctx.message.reply_to_message.from.username === ctx.botInfo.username;
+
+    // Kalau salah satu kondisi terpenuhi, GAS JAWAB!
+    if (isPrivate || isMention || isReply) {
+        ctx.sendChatAction('typing');
+        const reply = await tanyaGemini(ctx.chat.id, text);
+        
+        try {
+            // Kita reply balik ke pesan user biar rapi
+            await ctx.reply(reply, { 
+                parse_mode: 'Markdown',
+                reply_to_message_id: ctx.message.message_id 
+            });
+        } catch {
+            ctx.reply(reply);
+        }
+    }
+});
+
     
     // Respon kalau Private Chat ATAU di-Mention 'Ammo'
     if (ctx.chat.type === 'private' || text.toLowerCase().includes('ammo')) {
