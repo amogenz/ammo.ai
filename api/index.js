@@ -130,7 +130,7 @@ async function tanyaGemini(chatId, pesanUser) {
 }
 
 // --- 3. HANDLER PESAN (LOGIKA GABUNGAN) ---
-bot.start((ctx) => ctx.reply("Woi! Ammo Amogenz di sini. Mau nanya apa? 🔥"));
+bot.start((ctx) => ctx.reply("Woi! Ammo di sini. Mau nanya apa lu kimak? 🔥"));
 
 bot.on('text', async (ctx) => {
     const text = ctx.message.text;
