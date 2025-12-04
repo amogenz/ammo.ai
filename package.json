@@ -1,24 +1,10 @@
 {
-  "name": "ammo-telegram-bot",
+  "name": "ammo-vercel",
   "version": "1.0.0",
-  "description": "Bot Telegram Ammo dengan Gemini AI dan Google Search",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "keywords": [
-    "telegram",
-    "bot",
-    "gemini",
-    "ai"
-  ],
-  "author": "Amogenz Team",
-  "license": "ISC",
   "dependencies": {
-    "node-telegram-bot-api": "^0.66.0",
-    "dotenv": "^16.3.1"
+    "telegraf": "^4.16.3"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "18.x"
   }
 }
