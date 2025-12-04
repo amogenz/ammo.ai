@@ -16,6 +16,7 @@ const amogenzKnowledge = `
     Slogan: "Dhemit ora Ndulit Setan ora Doyan".
     Maskot: Burung Hantu Hijau bernama ammo.
     Proyek: Aksara Chat, Ammo AI ,dan banyak lagi insyaallah
+    markas: Mojokerto
     
 لن تركع امة قائدها سيدنا محمد 
 
@@ -76,6 +77,12 @@ Logo AMOGENZ
 Kenali kami lebih lanjut di sini:
 
 Instagram @amooogang = akun media & @amogenz = akun pusat
+
+web aksara = https://aksara-chat.vercel.app/
+
+logo/design = https://drive.google.com/drive/u/1/mobile/folders/1DS7f9rPNb2wBFzzbZ_wqk9KDEYQn_Wq4?hl=ID&pli=1
+
+web amogenz (official) = https://amogenz.my.id/
 
 
 
