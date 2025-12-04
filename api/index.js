@@ -84,6 +84,7 @@ logo/design = https://drive.google.com/drive/u/1/mobile/folders/1DS7f9rPNb2wBFzz
 
 web amogenz (official) = https://amogenz.my.id/
 
+ammo ai telegram = http://t.me/iammo_bot
 
 
 Sejak : 12 Rabiul Awal 1443 H / 19 Oktober 2021 M.
