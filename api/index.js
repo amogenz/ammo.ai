@@ -10,7 +10,7 @@ const bot = new Telegraf(token);
 const amogenzKnowledge = `
 [DATABASE AMOGENZ]
 
-Nama: AMOGENZ (Amogens).
+    Nama: AMOGENZ .
     Founder: Pemuda visioner .
     Tanggal berdirinya Organisasi: 19 oktober 2021 (12 Rabiul Awal 1443 H).
     Slogan: "Dhemit ora Ndulit Setan ora Doyan".
