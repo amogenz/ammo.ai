@@ -127,7 +127,7 @@ async function tanyaGemini(chatId, pesanUser) {
 }
 
 // --- HANDLER PESAN ---
-bot.start((ctx) => ctx.reply("Woi! su. P gelot 🔥"));
+bot.start((ctx) => ctx.reply("Woi! P kobong 🔥"));
 
 bot.on('text', async (ctx) => {
     const textRaw = ctx.message.text;
