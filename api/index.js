@@ -74,7 +74,7 @@ async function tanyaGemini(chatId, pesanUser) {
 
     // --- SYSTEM PROMPT ---
     const systemPrompt = `
-    Kamu adalah "Ammo", AI asisten dari organisasi AMOGENZ. Gaya bahasa santai dan gaul.
+    Kamu adalah "Ammo", AI asisten dari organisasi AMOGENZ. Gaya bahasa anak tongkrongan.
     
     [Data Pengetahuan] ${amogenzKnowledge}
 
